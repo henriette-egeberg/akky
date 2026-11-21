@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="/src/style.css" />
+		<script type="module" src="/src/js/api/listing.js"></script>
+
+		<title>Listing - Akky</title>
+	</head>
+	<body>
+		<header>
+			<a href="/index.html"> <img src="/public/icons.svg" alt="akky" /> </a>
+			<a href="#" id="logout-link">Log out</a>
+			<a href="/auth/register/index.html">Register</a>
+		</header>
+		<main id="app_login">
+			<h1 id="listing-title"></h1>
+			<div id="listing-images"></div>
+			<p id="listing-description"></p>
+			<p id="listing-seller"></p>
+			<p id="listing-ends"></p>
+			<h2>Bids</h2>
+			<ul id="bid-list"></ul>
+			<p id="form-message" aria-live="polite"></p>
+		</main>
+		<footer>
+			<p>&copy; 2026 Akky. All rights reserved.</p>
+		</footer>
+	</body>
+</html>

@@ -1,13 +1,20 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>akky</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="module" src="/src/js/pages/home.js"></script>
+
+		<title>akky</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<main id="main-content" class="main-content">
+			<h1>Listings</h1>
+			<p id="form-message" aria-live="polite"></p>
+			<div id="listings"></div>
+		</main>
+		<script type="module" src="/src/main.js"></script>
+	</body>
 </html>

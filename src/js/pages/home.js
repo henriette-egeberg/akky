@@ -23,7 +23,8 @@ function renderListings(listings) {
 
 		const ends = document.createElement("p");
 		ends.textContent = "Ends: " + new Date(listing.endsAt).toLocaleString();
-
+		card.className = "block bg-white border border-gray-300 rounded p-4 mb-2 hover:shadow max-w-100";
+		title.className = "font-bold";
 		card.append(title, ends);
 		container.append(card);
 	});

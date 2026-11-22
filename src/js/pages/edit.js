@@ -1,8 +1,8 @@
-import { setupLogout } from "../utils/logout.js";
+import { setupLogout, showCredits } from "../utils/logout.js";
+setupLogout();
+showCredits();
 import { getListing, updateListing } from "../api/listings.js";
 import { getToken } from "../utils/storage.js";
-
-setupLogout();
 
 if (!getToken()) window.location.href = "/auth/login/";
 

@@ -1,5 +1,6 @@
-import { setupLogout } from "../utils/logout.js";
+import { setupLogout, showCredits } from "../utils/logout.js";
 setupLogout();
+showCredits();
 import { loginUser } from "../api/auth.js";
 import { saveToken, saveUser } from "../utils/storage.js";
 

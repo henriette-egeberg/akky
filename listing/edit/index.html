@@ -11,29 +11,33 @@
 
 		<title>Listing - Akky</title>
 	</head>
-	<body>
-		<header>
-			<a href="/index.html"> <img src="/public/icons.svg" alt="akky" /> </a>
+	<body class="bg-gray-100 text-gray-900 min-h-10vh">
+		<header class="flex justify-between items-center p-4 bg-gray-800 text-white">
+			<a href="/index.html"> <img src="/public/favicon.svg" alt="akky" class="h-10 w-10" /> </a>
 			<a href="/auth/login/" id="login-link">Log in</a>
 			<a href="#" id="logout-link">Log out</a>
 			<a href="/listing/create/index.html" id="create-link">Create Listing</a>
 			<a href="/auth/register/index.html" id="register-link">Register</a>
 			<span id="header-credits"></span>
 		</header>
-		<main id="app_login">
-			<h1>Edit listing</h1>
+		<main id="app_login" class="main-content m-4">
+			<h1 class="text-4xl font-bold">Edit listing</h1>
 			<form id="edit-form">
 				<label for="title">Title:</label>
-				<input type="text" id="title" name="title" required />
+				<input class="max-w-100 block w-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 h-6 mt-2 mb-2" type="text" id="title" name="title" required />
 
 				<label for="description">Description:</label>
-				<textarea id="description" name="description"></textarea>
+				<textarea
+					class="max-w-100 block w-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 h-6 mt-2 mb-2"
+					id="description"
+					name="description"
+				></textarea>
 
 				<label for="image">Image URL:</label>
-				<input type="url" id="image" name="image" />
+				<input class="max-w-100 block w-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 h-6 mt-2 mb-2" type="url" id="image" name="image" />
 
 				<p id="form-message" aria-live="polite"></p>
-				<button type="submit">Save Changes</button>
+				<button class="bg-gray-600 hover:bg-gray-800 text-white px-4 rounded mb-4" type="submit">Save Changes</button>
 			</form>
 		</main>
 		<footer>

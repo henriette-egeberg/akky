@@ -13,13 +13,18 @@
 			<a href="/index.html"> <img src="/public/icons.svg" alt="akky" /> </a>
 			<a href="/auth/login/" id="login-link">Log in</a>
 			<a href="#" id="logout-link">Log out</a>
-			<a href="/listing/create/index.html">Create Listing</a>
-			<a href="/auth/register/index.html">Register</a>
+			<a href="/listing/create/index.html" id="create-link">Create Listing</a>
+			<a href="/auth/register/index.html" id="register-link">Register</a>
 			<span id="header-credits"></span>
 		</header>
 		<main id="main-content" class="main-content">
 			<h1>Listings</h1>
 			<p id="form-message" aria-live="polite"></p>
+			<form id="search-form">
+				<label for="search">Search:</label>
+				<input type="search" id="search" name="search" />
+				<button type="submit">Search</button>
+			</form>
 			<div id="listings"></div>
 		</main>
 		<script type="module" src="/src/main.js"></script>

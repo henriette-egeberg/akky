@@ -1,4 +1,6 @@
 import { API_BASE } from "./config.js";
+import { setupLogout } from "../utils/logout.js";
+setupLogout();
 export async function getListings() {
 	const response = await fetch(`${API_BASE}/auction/listings?_active=true&sort=created`);
 	const json = await response.json();

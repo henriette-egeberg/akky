@@ -30,3 +30,25 @@ export async function createListing(data) {
 	}
 	return json.data;
 }
+export async function updateListing(id, data) {
+	const response = await fetch(`${API_BASE}/auction/listings/${id}`, {
+		method: "PUT",
+		headers: authHeaders(),
+		body: JSON.stringify(data),
+	});
+	const json = await response.json();
+	if (!response.ok) {
+		throw new Error(json.errors?.[0]?.message || "Could not update listing");
+	}
+	return json.data;
+}
+
+export async function deleteListing(id) {
+	const response = await fetch(`${API_BASE}/auction/listings/${id}`, {
+		method: "DELETE",
+		headers: authHeaders(),
+	});
+	if (!response.ok) {
+		throw new Error("Could not delete listing");
+	}
+}

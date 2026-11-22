@@ -1,5 +1,7 @@
+import { setupLogout, showCredits } from "../utils/logout.js";
+setupLogout();
+showCredits();
 import { getListings } from "../api/listings.js";
-
 const container = document.querySelector("#listings");
 const message = document.querySelector("#form-message");
 

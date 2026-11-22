@@ -9,9 +9,12 @@
 	</head>
 	<body>
 		<header>
-			<a href="/">Akky</a>
+			<a href="/index.html"> <img src="/public/icons.svg" alt="akky" /> </a>
+			<a href="/auth/login/" id="login-link">Log in</a>
 			<a href="#" id="logout-link">Log out</a>
-			<a href="#" id="logout-link">Log out</a>
+			<a href="/listing/create/index.html">Create Listing</a>
+			<a href="/auth/register/index.html">Register</a>
+			<span id="header-credits"></span>
 		</header>
 		<main>
 			<img id="profile-banner" alt="" />
@@ -19,6 +22,19 @@
 			<h1 id="profile-name"></h1>
 			<p id="profile-bio"></p>
 			<p>Credits: <span id="profile-credits"></span></p>
+			<button id="edit-profile-button" type="button">Edit profile</button>
+			<form id="profile-form" hidden>
+				<label for="bio">Bio:</label>
+				<textarea id="bio" name="bio"></textarea>
+
+				<label for="avatar">Avatar URL:</label>
+				<input type="url" id="avatar" name="avatar" />
+
+				<label for="banner">Banner URL:</label>
+				<input type="url" id="banner" name="banner" />
+
+				<button type="submit">Save</button>
+			</form>
 			<p id="form-message" aria-live="polite"></p>
 		</main>
 	</body>

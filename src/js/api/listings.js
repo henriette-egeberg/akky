@@ -52,3 +52,11 @@ export async function deleteListing(id) {
 		throw new Error("Could not delete listing");
 	}
 }
+export async function searchListings(query) {
+	const response = await fetch(`${API_BASE}/auction/listings/search?q=${query}&_active=true&sort=created`);
+	const json = await response.json();
+	if (!response.ok) {
+		throw new Error(json.errors?.[0]?.message || "Search failed");
+	}
+	return json.data;
+}

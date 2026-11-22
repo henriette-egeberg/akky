@@ -1,6 +1,8 @@
 import { getListing } from "../api/listings.js";
 import { placeBid } from "../api/bids.js";
 import { getToken } from "../utils/storage.js";
+import { deleteListing } from "../api/listings.js";
+import { getUser } from "../utils/storage.js";
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
@@ -9,6 +11,11 @@ const message = document.querySelector("#form-message");
 async function showListing() {
 	try {
 		const listing = await getListing(id);
+		const user = getUser();
+		if (user && user.name === listing.seller.name) {
+			document.querySelector("#owner-buttons").style.display = "block";
+			document.querySelector("#edit-link").href = `/listing/edit/?id=${listing.id}`;
+		}
 
 		document.querySelector("#listing-title").textContent = listing.title;
 		document.querySelector("#listing-description").textContent = listing.description || "";
@@ -52,5 +59,14 @@ bidForm.addEventListener("submit", async (event) => {
 		window.location.reload();
 	} catch (error) {
 		bidMessage.textContent = error.message;
+	}
+});
+document.querySelector("#delete-button").addEventListener("click", async () => {
+	if (!confirm("Delete this listing?")) return;
+	try {
+		await deleteListing(id);
+		window.location.href = "/";
+	} catch (error) {
+		message.textContent = error.message;
 	}
 });

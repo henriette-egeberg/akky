@@ -44,3 +44,8 @@ form.addEventListener("submit", async (event) => {
 		document.querySelector("#form-message").textContent = error.message;
 	}
 });
+const editButton = document.querySelector("#edit-profile-button");
+
+editButton.addEventListener("click", () => {
+	form.hidden = !form.hidden;
+});

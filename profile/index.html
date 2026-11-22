@@ -16,11 +16,12 @@
 			<a href="/auth/register/index.html" id="register-link">Register</a>
 			<span id="header-credits"></span>
 		</header>
+		<img class="w-full h-48 object-cover" id="profile-banner" alt="" />
+
 		<main class="main-content m-4">
-			<img id="profile-banner" alt="" />
-			<img id="profile-avatar" alt="" />
-			<h1 class="text-4xl font-bold" id="profile-name"></h1>
-			<p id="profile-bio"></p>
+			<img class="relative -mt-40 border border-gray-300 rounded-full w-32 h-32 object-cover mb-6" id="profile-avatar" alt="" />
+			<h1 class="relative text-4xl font-bold" id="profile-name"></h1>
+			<p class="relative" id="profile-bio"></p>
 			<p>Credits: <span id="profile-credits"></span></p>
 			<button class="bg-gray-600 hover:bg-gray-800 text-white px-4 rounded mb-4" id="edit-profile-button" type="button">Edit profile</button>
 			<form id="profile-form" hidden>

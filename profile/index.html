@@ -7,33 +7,33 @@
 		<script type="module" src="/src/js/pages/profile.js"></script>
 		<title>Profile - Akky</title>
 	</head>
-	<body>
-		<header>
-			<a href="/index.html"> <img src="/public/icons.svg" alt="akky" /> </a>
+	<body class="bg-gray-100 text-gray-900 min-h-10vh">
+		<header class="flex justify-between items-center p-4 bg-gray-800 text-white">
+			<a href="/index.html"> <img src="/public/favicon.svg" alt="akky" class="h-10 w-10" /> </a>
 			<a href="/auth/login/" id="login-link">Log in</a>
 			<a href="#" id="logout-link">Log out</a>
 			<a href="/listing/create/index.html" id="create-link">Create Listing</a>
 			<a href="/auth/register/index.html" id="register-link">Register</a>
 			<span id="header-credits"></span>
 		</header>
-		<main>
+		<main class="main-content m-4">
 			<img id="profile-banner" alt="" />
 			<img id="profile-avatar" alt="" />
-			<h1 id="profile-name"></h1>
+			<h1 class="text-4xl font-bold" id="profile-name"></h1>
 			<p id="profile-bio"></p>
 			<p>Credits: <span id="profile-credits"></span></p>
-			<button id="edit-profile-button" type="button">Edit profile</button>
+			<button class="bg-gray-600 hover:bg-gray-800 text-white px-4 rounded mb-4" id="edit-profile-button" type="button">Edit profile</button>
 			<form id="profile-form" hidden>
 				<label for="bio">Bio:</label>
 				<textarea id="bio" name="bio"></textarea>
 
 				<label for="avatar">Avatar URL:</label>
-				<input type="url" id="avatar" name="avatar" />
+				<input class="max-w-100 block w-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 h-6 mt-2 mb-2" type="url" id="avatar" name="avatar" />
 
 				<label for="banner">Banner URL:</label>
-				<input type="url" id="banner" name="banner" />
+				<input class="max-w-100 block w-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 h-6 mt-2 mb-2" type="url" id="banner" name="banner" />
 
-				<button type="submit">Save</button>
+				<button class="bg-gray-600 hover:bg-gray-800 text-white px-4 rounded mb-4" type="submit">Save</button>
 			</form>
 			<p id="form-message" aria-live="polite"></p>
 		</main>

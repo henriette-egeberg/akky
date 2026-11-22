@@ -11,20 +11,20 @@
 
 		<title>Listing - Akky</title>
 	</head>
-	<body>
-		<header>
-			<a href="/index.html"> <img src="/public/icons.svg" alt="akky" /> </a>
+	<body class="bg-gray-100 text-gray-900 min-h-10vh">
+		<header class="flex justify-between items-center p-4 bg-gray-800 text-white">
+			<a href="/index.html"> <img src="/public/favicon.svg" alt="akky" class="h-10 w-10" /> </a>
 			<a href="/auth/login/" id="login-link">Log in</a>
 			<a href="#" id="logout-link">Log out</a>
 			<a href="/listing/create/index.html" id="create-link">Create Listing</a>
 			<a href="/auth/register/index.html" id="register-link">Register</a>
 			<span id="header-credits"></span>
 		</header>
-		<main id="app_login">
-			<h1 id="listing-title"></h1>
+		<main id="app_login" class="main-content m-4">
+			<h1 class="text-4xl font-bold" id="listing-title"></h1>
 			<div id="owner-buttons" style="display: none">
-				<a id="edit-link" href="#">Edit</a>
-				<button id="delete-button" type="button">Delete</button>
+				<a id="edit-link" href="#" class="text-blue-600 hover:underline">Edit</a>
+				<button id="delete-button" type="button" class="bg-red-600 hover:bg-red-800 text-white px-4 rounded mb-4">Delete</button>
 			</div>
 			<div id="listing-images"></div>
 			<p id="listing-description"></p>
@@ -32,8 +32,15 @@
 			<p id="listing-ends"></p>
 			<form id="bid-form">
 				<label for="amount">Your bid:</label>
-				<input type="number" id="amount" name="amount" min="1" required />
-				<button type="submit">Place bid</button>
+				<input
+					class="max-w-100 block w-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 h-6 mt-2 mb-2"
+					type="number"
+					id="amount"
+					name="amount"
+					min="1"
+					required
+				/>
+				<button class="bg-gray-600 hover:bg-gray-800 text-white px-4 rounded mb-4" type="submit">Place bid</button>
 			</form>
 			<p id="bid-message" aria-live="polite"></p>
 			<h2>Bids</h2>

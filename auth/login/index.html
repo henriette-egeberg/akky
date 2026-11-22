@@ -11,28 +11,44 @@
 
 		<title>Login - Akky</title>
 	</head>
-	<body>
-		<header>
-			<a href="/index.html"> <img src="/public/icons.svg" alt="akky" /> </a>
+	<body class="bg-gray-100 text-gray-900 min-h-10vh">
+		<header class="flex justify-between items-center p-4 bg-gray-800 text-white">
+			<a href="/index.html"> <img src="/public/favicon.svg" alt="akky" class="h-10 w-10" /> </a>
 			<a href="/auth/login/" id="login-link">Log in</a>
 			<a href="#" id="logout-link">Log out</a>
 			<a href="/listing/create/index.html" id="create-link">Create Listing</a>
 			<a href="/auth/register/index.html" id="register-link">Register</a>
 			<span id="header-credits"></span>
 		</header>
-		<main id="app_login">
-			<h1>Login</h1>
+		<main id="app_login" class="main-content m-4">
+			<h1 class="text-4xl font-bold">Login</h1>
 			<form id="login-form">
 				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required />
+				<input
+					class="max-w-100 block w-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 h-6 mt-2 mb-2"
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Enter your email"
+					autocomplete="email"
+					required
+				/>
 
 				<label for="password">Password:</label>
-				<input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+				<input
+					class="max-w-100 block w-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 h-6 mt-2 mb-2"
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Enter your password"
+					autocomplete="current-password"
+					required
+				/>
 
 				<p id="form-message" aria-live="polite"></p>
-				<button type="submit">Login</button>
+				<button class="bg-gray-600 hover:bg-gray-800 text-white px-4 rounded mb-4" type="submit">Login</button>
 			</form>
-			<p>Need an account? <a href="/auth/register/index.html">Register</a></p>
+			<p class="text-sm text-blue-600 underline">Need an account? <a href="/auth/register/index.html">Register</a></p>
 		</main>
 		<footer>
 			<p>&copy; 2026 Akky. All rights reserved.</p>
